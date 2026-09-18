@@ -1,0 +1,20 @@
+# Modul operasi dasar kalkulator
+fungsi tambah(a, b):
+    balekken a + b
+
+fungsi kurang(a, b):
+    balekken a - b
+
+fungsi kali(a, b):
+    balekken a * b
+
+fungsi bagi(a, b):
+    anga b == 0:
+        balekken kosong
+    balekken a / b
+
+fungsi modulo(a, b):
+    balekken a % b
+
+fungsi pangkat(a, b):
+    balekken a ^ b

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahanlang"
+version = "0.1.0"
+description = "AHAN — bahasa pemrograman imperatif dengan sintaks bahasa Devayan (Simeulue)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "AHAN Contributors" }
+]
+keywords = ["programming-language", "interpreter", "ahan", "devayan", "simeulue", "indonesia"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Indonesian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Interpreters",
+    "Topic :: Education",
+]
+
+[project.urls]
+Homepage = "https://github.com/<user>/ahanlang"
+Repository = "https://github.com/<user>/ahanlang.git"
+Issues = "https://github.com/<user>/ahanlang/issues"
+Documentation = "https://github.com/<user>/ahanlang/tree/main/docs"
+Changelog = "https://github.com/<user>/ahanlang/blob/main/CHANGELOG.md"
+
+[project.scripts]
+ahan = "ahan.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ahan = ["*.ahan"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

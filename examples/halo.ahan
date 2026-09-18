@@ -1,0 +1,4 @@
+# Program selamat datang
+nama = "Dunia"
+kaluarken("Halo, " + nama + "!")
+kaluarken("Selamat datang di SimeulueLang.")

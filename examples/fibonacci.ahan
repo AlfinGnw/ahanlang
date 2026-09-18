@@ -1,0 +1,11 @@
+# Deret Fibonacci
+fungsi fib(n):
+    anga n <= 1:
+        balekken n
+    laenne:
+        balekken fib(n - 1) + fib(n - 2)
+
+mek i bak [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+    antoroman(fib(i))
+    antoroman(" ")
+kaluarken("")

@@ -1,0 +1,54 @@
+# Kalkulator interaktif
+pakek "kalkulator_modul"
+
+kaluarken("=== Kalkulator SimeulueLang ===")
+kaluarken("Operator: + - * / % ^")
+kaluarken("Ketik 'kaluar' pada angka pertama untuk keluar")
+
+salamo dise:
+    antoroman("Angka pertama: ")
+    input1 = mitidao()
+    anga input1 == "kaluar":
+        kaluarken("Terima kasih!")
+        kaluar
+
+    cubo:
+        a = int(input1)
+    adorapek pesan:
+        kaluarken("Input tidak valid: " + pesan)
+        lanjar
+
+    antoroman("Operator: ")
+    op = mitidao()
+
+    antoroman("Angka kedua: ")
+    input2 = mitidao()
+    cubo:
+        b = int(input2)
+    adorapek pesan:
+        kaluarken("Input tidak valid: " + pesan)
+        lanjar
+
+    hasil = 0
+    anga op == "+":
+        hasil = tambah(a, b)
+    laenne anga op == "-":
+        hasil = kurang(a, b)
+    laenne anga op == "*":
+        hasil = kali(a, b)
+    laenne anga op == "/":
+        hasil = bagi(a, b)
+        anga hasil == kosong:
+            kaluarken("Error: pembagian nol")
+            lanjar
+    laenne anga op == "%":
+        hasil = modulo(a, b)
+    laenne anga op == "^":
+        hasil = pangkat(a, b)
+    laenne:
+        kaluarken("Operator tidak dikenal")
+        lanjar
+
+    antoroman("Hasil: ")
+    kaluarken(hasil)
+    kaluarken("")

@@ -1,0 +1,7 @@
+# AHAN tidak memerlukan dependensi eksternal.
+# Semua menggunakan Python Standard Library (3.8+).
+#
+# Untuk pengembangan (opsional):
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
