@@ -8,16 +8,16 @@ version = "0.1.1"
 description = "AHAN — bahasa pemrograman imperatif dengan sintaks bahasa Devayan (Simeulue)"
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
-    { name = "AHAN Contributors" }
+    { name = "Alfin Gunawan", email = "alfingunawan003@gmail.com" }
 ]
 keywords = ["programming-language", "interpreter", "ahan", "devayan", "simeulue", "indonesia"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Education",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Natural Language :: Indonesian",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
@@ -31,11 +31,11 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/<user>/ahanlang"
-Repository = "https://github.com/<user>/ahanlang.git"
-Issues = "https://github.com/<user>/ahanlang/issues"
-Documentation = "https://github.com/<user>/ahanlang/tree/main/docs"
-Changelog = "https://github.com/<user>/ahanlang/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/AlfinGnw/ahanlang"
+Repository = "https://github.com/AlfinGnw/ahanlang.git"
+Issues = "https://github.com/AlfinGnw/ahanlang/issues"
+Documentation = "https://github.com/AlfinGnw/ahanlang/tree/main/docs"
+Changelog = "https://github.com/AlfinGnw/ahanlang/blob/main/CHANGELOG.md"
 
 [project.scripts]
 ahan = "ahan.main:cli"

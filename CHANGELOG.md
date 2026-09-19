@@ -7,11 +7,20 @@ dan proyek ini mengikuti [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+### Ditambahkan
+- **Test suite otomatis** dengan pytest (`tests/`) — 86 test untuk lexer, parser, dan evaluator
+
+### Diperbaiki
+- Angka desimal yang diawali titik (`x = .5`) kini dikenali sebagai float
+- Operator pangkat (`^`) kini bersifat right-associative: `2 ^ 3 ^ 2` = 512
+- Target assignment invalid (`1 + 2 = 5`) ditolak saat parsing dengan pesan jelas
+- Postfix indexing kini berlaku pada semua ekspresi primary (string literal, list literal, hasil pemanggilan, ekspresi dalam kurung)
+- Indeks negatif didukung untuk list dan string: `daftar[-1]`
+- Output boolean/nil konsisten: `dise`, `salah`, `kosong`
+- Error fase lexer/parse diformat rapi dengan nomor baris dan kolom
+- `run_file()` mendukung deteksi encoding otomatis (UTF-8, UTF-16, latin-1)
+
 ### Direncanakan
-- Publikasi ke PyPI sebagai `ahanlang`
-- Web playground dengan Pyodide
-- Test suite otomatis dengan pytest
-- Ekstensi VS Code untuk syntax highlighting
 
 ## [0.1.0] - 2025-01-XX
 
