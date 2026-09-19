@@ -52,14 +52,28 @@ def run_code(code, evaluator=None, main_file=None):
 
 
 def run_file(filename):
-    """Jalankan file AHAN."""
+    """Jalankan file AHAN dengan deteksi encoding otomatis."""
     if not os.path.exists(filename):
         print(f"Error: File '{filename}' tidak ditemukan.", file=sys.stderr)
         sys.exit(1)
 
-    # Baca dengan encoding utf-8-sig untuk membuang BOM jika ada
-    with open(filename, 'r', encoding='utf-8-sig') as f:
-        code = f.read()
+    # Baca file sebagai bytes
+    with open(filename, 'rb') as f:
+        raw = f.read()
+
+    # Coba beberapa encoding
+    code = None
+    for enc in ('utf-8-sig', 'utf-16', 'utf-16-le', 'utf-16-be', 'latin-1'):
+        try:
+            code = raw.decode(enc)
+            break
+        except (UnicodeDecodeError, LookupError):
+            continue
+
+    if code is None:
+        print(f"Error: Tidak dapat membaca file '{filename}' (encoding tidak dikenal).", file=sys.stderr)
+        sys.exit(1)
+
     run_code(code, main_file=filename)
 
 

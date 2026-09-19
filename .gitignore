@@ -34,3 +34,5 @@ Thumbs.db
 # Log & env
 *.log
 .env
+test_install_venv/
+ahanlang-0.1.0/
