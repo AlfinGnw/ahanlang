@@ -8,6 +8,8 @@ build/
 dist/
 *.egg-info/
 *.egg
+*.vsix
+node_modules/
 
 # Virtual environment
 venv/
@@ -23,6 +25,8 @@ test_venv/
 # IDE & editor
 .idea/
 .vscode/
+!vscode-ahan/.vscode/
+!vscode-ahan/.vscode/launch.json
 *.swp
 *.sln
 *.suo

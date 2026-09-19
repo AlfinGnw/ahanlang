@@ -8,6 +8,7 @@ dan proyek ini mengikuti [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 ## [Unreleased]
 
 ### Ditambahkan
+- **Ekstensi VS Code** untuk syntax highlighting AHAN (`vscode-ahan/`) — grammar TextMate, language-configuration, dan snippets
 - **Test suite otomatis** dengan pytest (`tests/`) — 86 test untuk lexer, parser, dan evaluator
 
 ### Diperbaiki

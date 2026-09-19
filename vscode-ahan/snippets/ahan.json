@@ -1,0 +1,50 @@
+{
+  "Percabangan anga (if/else)": {
+    "prefix": "anga",
+    "body": [
+      "anga ${1:kondisi}:",
+      "\t${2:kode...}",
+      "laenne:",
+      "\t${3:kode...}"
+    ],
+    "description": "Blok percabangan if/else"
+  },
+  "Perulangan salamo (while)": {
+    "prefix": "salamo",
+    "body": [
+      "salamo ${1:kondisi}:",
+      "\t${2:kode...}"
+    ],
+    "description": "Perulangan while"
+  },
+  "Perulangan mek (for)": {
+    "prefix": "mek",
+    "body": [
+      "mek ${1:item} bak ${2:daftar}:",
+      "\t${3:kode...}"
+    ],
+    "description": "Perulangan for-each"
+  },
+  "Deklarasi fungsi": {
+    "prefix": "fungsi",
+    "body": [
+      "fungsi ${1:nama}(${2:param}):",
+      "\t${3:kode...}"
+    ],
+    "description": "Deklarasi fungsi"
+  },
+  "Keluarkan pesan (kaluarken)": {
+    "prefix": "kaluarken",
+    "body": [
+      "kaluarken(${1:pesan})"
+    ],
+    "description": "Cetak output"
+  },
+  "Baca input (baco)": {
+    "prefix": "baco",
+    "body": [
+      "${1:variabel} = baco(${2:prompt})"
+    ],
+    "description": "Baca input dari pengguna"
+  }
+}

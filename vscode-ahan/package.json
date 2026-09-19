@@ -1,0 +1,53 @@
+{
+  "name": "ahan-language",
+  "displayName": "AHAN Language",
+  "description": "Syntax highlighting untuk bahasa pemrograman AHAN (SimeulueLang) — bahasa imperatif dengan sintaks Devayan.",
+  "version": "0.1.0",
+  "publisher": "ahanlang",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "ahan",
+    "simeulue",
+    "devayan",
+    "programming-language",
+    "indonesia"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlfinGnw/ahanlang.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "ahan",
+        "aliases": [
+          "AHAN",
+          "ahan"
+        ],
+        "extensions": [
+          ".ahan"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ahan",
+        "scopeName": "source.ahan",
+        "path": "./syntaxes/ahan.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ahan",
+        "path": "./snippets/ahan.json"
+      }
+    ]
+  }
+}
