@@ -28,7 +28,7 @@ Versi saat ini sudah berfungsi sebagai bahasa pemrograman dasar dengan fitur len
 - [ ] Instalasi via `pip install ahanlang`
 - [ ] Executable mandiri dengan **PyInstaller**
 - [ ] Docker image resmi
-- [ ] Extension **VS Code** untuk syntax highlighting
+- [x] Extension **VS Code** untuk syntax highlighting (lihat `vscode-ahan/`)
 
 ---
 

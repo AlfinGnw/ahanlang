@@ -1,0 +1,43 @@
+# Contoh program AHAN untuk menguji syntax highlighting ekstensi.
+
+# Komentar satu baris
+nama = "Alfin"        # komentar di akhir baris
+umur = 25
+bilangan = 3.14
+pecahan = .5
+aktif = dise
+tidak_ada = kosong
+
+anga umur >= 18 dan aktif:
+    kaluarken("Dewasa")
+laenne anga umur > 12:
+    kaluarken("Remaja")
+laenne:
+    kaluarken("Anak")
+
+fungsi faktorial(n):
+    anga n <= 1:
+        balekken 1
+    laenne:
+        balekken n * faktorial(n - 1)
+
+hasil = faktorial(5)
+antoroman("faktorial: ")
+kaluarken(hasil)
+
+mek item bak [1, 2, 3]:
+    anga item == 3:
+        kajab
+    ahan(item)
+
+salamo umur < 30:
+    umur += 1
+    anga umur == 28:
+        lanjar
+    anga umur >= 30:
+        kajab
+
+cubo:
+    x = int("42")
+adorapek pesan:
+    ahan("Error: " + pesan)

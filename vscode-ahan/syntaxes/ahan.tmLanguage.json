@@ -1,0 +1,137 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "AHAN",
+  "scopeName": "source.ahan",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#function-declaration" },
+    { "include": "#keywords" },
+    { "include": "#logical-operators" },
+    { "include": "#function-call" },
+    { "include": "#operators" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "match": "#.*$",
+          "name": "comment.line.number-sign.ahan"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.ahan",
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.ahan" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.ahan" }
+          },
+          "patterns": [
+            { "match": "\\\\.", "name": "constant.character.escape.ahan" }
+          ]
+        },
+        {
+          "name": "string.quoted.single.ahan",
+          "begin": "'",
+          "end": "'",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.ahan" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.ahan" }
+          },
+          "patterns": [
+            { "match": "\\\\.", "name": "constant.character.escape.ahan" }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "(?<![\\w.])(\\.?\\d+(\\.\\d*)?)(?![\\w.])",
+          "name": "constant.numeric.ahan"
+        }
+      ]
+    },
+    "function-declaration": {
+      "patterns": [
+        {
+          "match": "\\b(fungsi)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
+          "captures": {
+            "1": { "name": "keyword.other.definition.ahan" },
+            "2": { "name": "entity.name.function.ahan" }
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(anga|laenne|salamo|mek|bak|kajab|lanjar|kaluar|cubo|adorapek)\\b",
+          "name": "keyword.control.ahan"
+        },
+        {
+          "match": "\\b(fungsi|balekken|muba|pakek)\\b",
+          "name": "keyword.other.ahan"
+        },
+        {
+          "match": "\\b(dise|salah|kosong)\\b",
+          "name": "constant.language.ahan"
+        },
+        {
+          "match": "\\b(ahan|kaluarken|antoroman|baco|mitidao)\\b",
+          "name": "support.function.ahan"
+        },
+        {
+          "match": "\\b(int|float|str|panjang|abek|kunci|nilai|pasangan)\\b",
+          "name": "support.function.builtin.ahan"
+        }
+      ]
+    },
+    "logical-operators": {
+      "patterns": [
+        {
+          "match": "\\b(dan|atau|teen)\\b",
+          "name": "keyword.operator.logical.ahan"
+        }
+      ]
+    },
+    "function-call": {
+      "patterns": [
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+          "name": "support.function.ahan"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "(\\^=|\\+=|-=|\\*=|/=|%=|==|!=|<=|>=|=>|\\+|\\-|\\*|/|%|\\^|=|<|>)",
+          "name": "keyword.operator.ahan"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "match": "[(),\\[\\]\\{\\}]",
+          "name": "punctuation.section.ahan"
+        },
+        {
+          "match": ":",
+          "name": "punctuation.separator.ahan"
+        }
+      ]
+    }
+  }
+}
